@@ -145,7 +145,7 @@
       </div>
     </div>
     <div
-      class="our-impacts bg-[#CFF0DC] w-full max-h-[436px] flex flex-1 flex-col justify-center items-center p-10"
+      class="our-impacts bg-[#CFF0DC] w-full max-h-[336px] flex flex-1 flex-col justify-center items-center p-10"
     >
       <h1 class="text-4xl text-center p-1 mb-5">Our Impacts</h1>
 
@@ -177,29 +177,27 @@
       </div>
     </div>
     <div
-      class="plant-form bg-[#166534] flex flex-1 flex-col justify-center items-center p-10"
+      class="plant-form w-[90vw] bg-[#166534] flex flex-1 flex-col justify-center items-center p-1 pb-10"
     >
       <h1 class="text-4xl text-white pb-10">Plant a tree today</h1>
 
-      <form
-        class="w-1/4 mx-auto bg-[#15803D] flex flex-1 flex-col rounded-xl p-8"
-      >
-        <div class="w-full group m-0 p-2">
+      <form class="bg-[#15803D] flex flex-1 flex-col rounded-lg p-4 pb-8">
+        <div class="group m-0 p-1 lg:p-2">
           <input
             type="name"
             name="floating_name"
             id="floating_name"
-            class="block p-4 w-full rounded-xl text-sm text-gray bg-white"
+            class="block p-1 lg:p-3 w-full rounded-xl text-sm text-gray bg-white"
             placeholder=" Please Enter Your Name Here"
             required
           />
         </div>
-        <div class="w-full group m-0 p-2">
+        <div class="w-full group m-0 p-1 lg:p-2">
           <input
             type="email"
             name="floating_email"
             id="floating_email"
-            class="block w-full rounded-xl text-sm bg-white p-4"
+            class="block w-full rounded-xl text-sm bg-white p-1 lg:p-3"
             placeholder=" Please Enter Your Email Here"
             required
           />
@@ -208,19 +206,21 @@
           <select
             name="donate-trees"
             id="donate-trees"
-            class="p-4 w-full block bg-white text-gray text-sm rounded-xl text-center"
+            class="p-1 lg:p-3 w-full block bg-white text-gray-500 text-sm rounded-xl text-center"
           >
-            <option class="text-gray" value="0">Please select an option</option>
-            <option class="text-gray" value="1">1 tree, $5</option>
-            <option class="text-gray" value="5">5 trees, $25</option>
-            <option class="text-gray" value="10">10 trees, $50</option>
-            <option class="text-gray" value="20">20 trees, $100</option>
+            <option class="text-gray-500" value="0">
+              Please select an option
+            </option>
+            <option class="text-gray-500" value="1">1 tree, $5</option>
+            <option class="text-gray-500" value="5">5 trees, $25</option>
+            <option class="text-gray-500" value="10">10 trees, $50</option>
+            <option class="text-gray-500" value="20">20 trees, $100</option>
           </select>
         </div>
         <br />
         <button
           type="submit"
-          class="w-8/10 m-0 p-4 text-green-600 font-light bg-yellow-400 hover:bg-yellow-700 hover:text-white hover:font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+          class="w-8/10 m-0 p-1 lg:p-4 text-green-600 font-light bg-yellow-400 hover:bg-yellow-700 hover:text-white hover:font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
         >
           Donate
         </button>
