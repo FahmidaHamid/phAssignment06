@@ -98,10 +98,7 @@
       <div
         class="main-content w-full lg:w-9/10 flex flex-1 flex-row p-2 lg:p-4"
       >
-        <div
-          id="load-cats"
-          class="load-cat w-3/12 border-2 border-solid border-gray-300"
-        >
+        <div id="load-cats" class="load-cat w-3/12">
           <h1 class="text-2xl font-bold">Categories</h1>
           <ul
             id="tree-cat-ul"
@@ -116,7 +113,23 @@
           id="display-trees"
           class="w-7/12 grid flex-1 grid-cols-1 lg:grid-cols-3 gap-y-3 gap-x-3"
         ></div>
-        <div class="cart w-2/12">Cart</div>
+        <div class="cart w-2/12 p-4 bg-gray-100">
+          <h1 class="text-3xl font-bold p-1">Your Cart</h1>
+          <div class="history">
+            <div
+              class="card rounded-xl bg-green-100 max-w-sm flex flex-1 flex-col"
+              id="card-dismiss-2"
+            >
+              <div class="flex flex-1 flex-row justify-around">
+                <h2 class="card-title w-8/10">Mango Tree</h2>
+                <button class="btn-close">
+                  <span class="text-lg"><i class="fa-solid fa-x"></i></span>
+                </button>
+              </div>
+              <p class="w-8/10 p-2 text-normal font-thin">500 * 1</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div
@@ -177,12 +190,14 @@
       </div>
     </div>
     <div
-      class="plant-form w-[90vw] bg-[#166534] flex flex-1 flex-col justify-center items-center p-1 pb-10"
+      class="plant-form w-full bg-[#166534] flex flex-1 flex-col justify-center items-center p-1 pb-10"
     >
       <h1 class="text-4xl text-white pb-10">Plant a tree today</h1>
 
-      <form class="bg-[#15803D] flex flex-1 flex-col rounded-lg p-4 pb-8">
-        <div class="group m-0 p-1 lg:p-2">
+      <form
+        class="bg-[#15803D] sm:w-9/10 lg:w-1/2 flex flex-1 flex-col rounded-lg p-2 pb-8"
+      >
+        <div class="group m-1 p-1 lg:p-2">
           <input
             type="name"
             name="floating_name"
@@ -192,7 +207,7 @@
             required
           />
         </div>
-        <div class="w-full group m-0 p-1 lg:p-2">
+        <div class="w-full group m-1 p-1 lg:p-2">
           <input
             type="email"
             name="floating_email"
@@ -202,7 +217,7 @@
             required
           />
         </div>
-        <div class="w-full group m-0 p-2">
+        <div class="w-full group m-1 p-2">
           <select
             name="donate-trees"
             id="donate-trees"
@@ -220,7 +235,7 @@
         <br />
         <button
           type="submit"
-          class="w-8/10 m-0 p-1 lg:p-4 text-green-600 font-light bg-yellow-400 hover:bg-yellow-700 hover:text-white hover:font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+          class="w-8/10 m-1 p-1 lg:p-4 text-green-600 font-light bg-yellow-400 hover:bg-yellow-700 hover:text-white hover:font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
         >
           Donate
         </button>

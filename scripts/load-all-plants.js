@@ -18,21 +18,19 @@ const loadAllPlants = async () => {
       const item = document.createElement("div");
       item.classList.add(
         "card",
-        "bg-base-500",
-        "w-68",
+        "bg-amber-100",
+        "max-w-[360px]",
+        "max-h-[396px]",
         "shadow-lg",
-        "rounded-xl"
+        "rounded-xl",
+        "flex",
+        "flex-1",
+        "flex-col"
       );
 
       const imgElem = document.createElement("img");
       imgElem.src = plant.image;
-      imgElem.classList.add(
-        "rounded-xl",
-        "scale-75",
-        "border-2",
-        "border-solid",
-        "border-gray-100"
-      );
+      imgElem.classList.add("rounded-xl", "max-h-[80px]", "scale-75");
       item.appendChild(imgElem);
 
       const cardBody = document.createElement("div");
@@ -53,7 +51,7 @@ const loadAllPlants = async () => {
                 </div>
                 <div class="card-actions justify-end">
                   <button
-                    class="btn btn-primary bg-green-700 text-white hover:bg-yellow-700 hover:text-yellow"
+                    class="btn w-9/10 bg-green-700 text-white rounded-xl hover:bg-yellow-700 hover:text-yellow"
                   >
                     Add to Cart
                   </button>
