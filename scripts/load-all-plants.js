@@ -18,7 +18,7 @@ const loadAllPlants = async () => {
       const item = document.createElement("div");
       item.classList.add(
         "card",
-        "bg-base-100",
+        "bg-base-500",
         "w-68",
         "shadow-lg",
         "rounded-xl"
@@ -26,7 +26,13 @@ const loadAllPlants = async () => {
 
       const imgElem = document.createElement("img");
       imgElem.src = plant.image;
-      imgElem.classList.add("rounded-xl");
+      imgElem.classList.add(
+        "rounded-xl",
+        "scale-75",
+        "border-2",
+        "border-solid",
+        "border-gray-100"
+      );
       item.appendChild(imgElem);
 
       const cardBody = document.createElement("div");
@@ -41,7 +47,7 @@ const loadAllPlants = async () => {
                   >
                     ${plant.category}
                   </p>
-                  <p class="price w-1/2 text-lg bg-white text-right">
+                  <p class="price w-1/2 text-lg bg-transparent text-right">
                     <i class="fa-solid fa-bangladeshi-taka-sign"></i>${plant.price}
                   </p>
                 </div>

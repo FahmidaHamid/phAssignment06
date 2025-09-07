@@ -23,7 +23,7 @@ const loadCategory = async () => {
       item.textContent = catId.category_name;
       const liItem = document.createElement("li");
       liItem.id = `${catId.id}`;
-      liItem.classList.add(`w-[250px]`, `h-[35px]`);
+      liItem.classList.add(`w-[250px]`, `h-[35px]`, `drop-shadow-lg`);
       liItem.appendChild(item);
       parentUL.appendChild(liItem);
     }
