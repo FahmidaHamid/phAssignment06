@@ -17,15 +17,9 @@ const loadCategory = async () => {
     */
     const parentUL = document.getElementById("tree-cat-ul");
     for (catId of catIds) {
-      console.log(catId.id);
-      const item = document.createElement("a");
-      item.href = "./index.html";
-      item.textContent = catId.category_name;
-      const liItem = document.createElement("li");
-      liItem.id = `${catId.id}`;
-      liItem.classList.add(`w-[250px]`, `h-[35px]`, `drop-shadow-lg`);
-      liItem.appendChild(item);
-      parentUL.appendChild(liItem);
+      const btnDiv = document.createElement("div");
+      btnDiv.innerHTML = `<button id="cat-btn-${catId.id}" onclick="loadDetailsByCategory(${catId.id})" class="btn category-btn btn-soft w-[250px] h-[35px] rounded-xl btn-accent">${catId.category_name}</button>`;
+      parentUL.appendChild(btnDiv);
     }
   } catch (error) {
     console.error("Could not fetch data:", error);

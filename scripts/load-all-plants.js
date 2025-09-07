@@ -18,19 +18,20 @@ const loadAllPlants = async () => {
       const item = document.createElement("div");
       item.classList.add(
         "card",
-        "bg-amber-100",
-        "max-w-[360px]",
-        "max-h-[396px]",
+        "bg-base-100",
+        "w-60",
         "shadow-lg",
         "rounded-xl",
         "flex",
         "flex-1",
-        "flex-col"
+        "flex-col",
+        "justify-center",
+        "items-center"
       );
 
       const imgElem = document.createElement("img");
       imgElem.src = plant.image;
-      imgElem.classList.add("rounded-xl", "max-h-[80px]", "scale-75");
+      imgElem.classList.add("rounded-xl", "pt-2");
       item.appendChild(imgElem);
 
       const cardBody = document.createElement("div");
