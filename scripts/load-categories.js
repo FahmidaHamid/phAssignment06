@@ -18,7 +18,7 @@ const loadCategory = async () => {
     const parentUL = document.getElementById("tree-cat-ul");
     for (catId of catIds) {
       const btnDiv = document.createElement("div");
-      btnDiv.innerHTML = `<button id="cat-btn-${catId.id}" onclick="loadDetailsByCategory(${catId.id})" class="btn category-btn btn-soft w-[250px] h-[35px] rounded-xl btn-accent">${catId.category_name}</button>`;
+      btnDiv.innerHTML = `<button id="cat-btn-${catId.id}" onclick="loadDetailsByCategory(${catId.id})" class="btn category-btn btn-soft text-gray-700 w-[250px] h-[35px] rounded-xl btn-accent">${catId.category_name}</button>`;
       parentUL.appendChild(btnDiv);
     }
   } catch (error) {

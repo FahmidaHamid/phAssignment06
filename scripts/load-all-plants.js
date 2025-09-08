@@ -7,12 +7,12 @@ const loadAllPlants = async () => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json(); // Await the parsing of the response body
-    console.log(data);
+    //console.log(data);
     const plants = data.plants;
     //console.log(plants); // The actual data
 
     const parentUL = document.getElementById("display-trees");
-    console.log(parentUL);
+    //console.log(parentUL);
     for (plant of plants) {
       //       console.log(catId.id);
       const item = document.createElement("div");
@@ -34,11 +34,18 @@ const loadAllPlants = async () => {
       imgElem.classList.add("rounded-xl", "pt-2");
       item.appendChild(imgElem);
 
+      /*
+      Slicing the description
+      */
+      let shortDescription = plant.description.substring(0, 50);
+      shortDescription += "...";
+
       const cardBody = document.createElement("div");
       cardBody.classList.add("card-body");
-      cardBody.innerHTML = `<h2 class="card-title text-xl">${plant.name}</h2>
+      cardBody.innerHTML = `<h2 class="card-title text-xl">
+                <button onclick="loadTreeDetails(${plant.id})">${plant.name}</button></h2>
                 <p class="card-description text-sm">
-                  ${plant.description}
+                  ${shortDescription}
                 </p>
                 <div class="cat-price flex flex-1 justify-around items-center">
                   <p
@@ -52,7 +59,9 @@ const loadAllPlants = async () => {
                 </div>
                 <div class="card-actions justify-end">
                   <button
-                    class="btn w-9/10 bg-green-700 text-white rounded-xl hover:bg-yellow-700 hover:text-yellow"
+                    id="add-btn-${plant.id}"
+                    onclick="addToCart(${plant.id})"
+                    class="btn add-btn w-9/10 bg-green-700 text-white rounded-xl hover:bg-yellow-700 hover:text-yellow"
                   >
                     Add to Cart
                   </button>

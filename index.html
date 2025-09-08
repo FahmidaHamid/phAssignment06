@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trees</title>
+    <title>Green World</title>
     <link rel="stylesheet" href="./src/output.css" />
     <link rel="stylesheet" href="./src/font.css" />
     <script
@@ -42,8 +42,14 @@
             <li><a>Plant a Tree</a></li>
           </ul>
         </div>
-        <a class="btn btn-ghost text-xl hover:bg-yellow-700 hover:text-white"
-          >Green Earth</a
+        <img
+          class="w-[30px] h-[30px]"
+          src="./assets/green-home.jpg"
+          alt=""
+          srcset=""
+        />
+        <a class="btn btn-ghost text-xl hover:bg-yellow-700 hover:text-white">
+          Green Earth</a
         >
       </div>
       <div class="navbar-center hidden lg:flex">
@@ -113,20 +119,7 @@
           class="cart sm:w-full sm:p-2 lg:w-3/12 lg:p-5 bg-gray-100 rounded-xl"
         >
           <h1 class="text-3xl font-bold p-1">Your Cart</h1>
-          <div class="history">
-            <div
-              class="card rounded-xl bg-green-100 max-w-sm flex flex-1 flex-col"
-              id="card-dismiss-2"
-            >
-              <div class="flex flex-1 flex-row justify-around">
-                <h2 class="card-title w-8/10">Mango Tree</h2>
-                <button class="btn-close">
-                  <span class="text-lg"><i class="fa-solid fa-x"></i></span>
-                </button>
-              </div>
-              <p class="w-8/10 p-2 text-normal font-thin">500 * 1</p>
-            </div>
-          </div>
+          <ul id="cart-history"></ul>
         </div>
       </div>
     </div>
@@ -246,8 +239,24 @@
         © 2025 Green Earth. All Rights Reserved.
       </p>
     </div>
+
+    <!-- <button class="btn" onclick="tree_modal.showModal()">open modal</button> -->
+    <dialog id="tree_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="modal_container"></div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
     <script src="./scripts/load-categories.js"></script>
     <script src="./scripts/load-datails-by-cat.js"></script>
     <script src="./scripts/load-all-plants.js"></script>
+    <script src="./scripts/add-to-cart.js"></script>
+    <script src="./scripts/remove-from-list.js"></script>
+    <script src="./scripts/load-tree-details.js"></script>
   </body>
 </html>

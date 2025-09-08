@@ -72,11 +72,19 @@ const loadDetailsByCategory = async (id) => {
       imgElem.classList.add("rounded-xl", "pt-2");
       item.appendChild(imgElem);
 
+      /*
+      Slicing the description
+      */
+      let shortDescription = plant.description.substring(0, 50);
+      shortDescription += "...";
+
       const cardBody = document.createElement("div");
       cardBody.classList.add("card-body");
-      cardBody.innerHTML = `<h2 class="card-title text-xl">${plant.name}</h2>
+      cardBody.innerHTML = `
+               <h2 class="card-title text-xl"><button onclick="loadTreeDetails(${plant.id})">${plant.name}</button></h2>  
+        
                 <p class="card-description text-sm">
-                  ${plant.description}
+                  ${shortDescription}
                 </p>
                 <div class="cat-price flex flex-1 justify-around items-center">
                   <p
@@ -89,8 +97,10 @@ const loadDetailsByCategory = async (id) => {
                   </p>
                 </div>
                 <div class="card-actions justify-end">
-                  <button
-                    class="btn w-9/10 bg-green-700 text-white rounded-xl hover:bg-yellow-700 hover:text-yellow"
+                   <button
+                    id="add-btn-${plant.id}"
+                    onclick="addToCart(${plant.id})"
+                    class="btn add-btn w-9/10 bg-green-700 text-white rounded-xl hover:bg-yellow-700 hover:text-yellow"
                   >
                     Add to Cart
                   </button>
