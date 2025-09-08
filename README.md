@@ -38,3 +38,43 @@ filter():
     To create a new array containing only the elements that pass a specific test (a condition) implemented by a provided function.
     Return Value: A new array containing a subset of the original array's elements, specifically those for which the provided function returns true. If no elements pass the test, an empty array is returned.
 ```
+
+3. What are arrow functions in ES6?
+
+```
+Arrow functions, introduced in ECMAScript 2015 (ES6), provide a concise syntax for writing function expressions in JavaScript. They offer a shorter and more elegant way to define functions compared to traditional function declarations or expressions.
+
+Example: const sum = (a, b) => a + b;
+or, const isOdd = (a) => {
+    if(a mod 2) return true;
+    else return false;
+}
+
+Arrow functions are commonly used for short, anonymous functions, especially in array methods like map, filter, and reduce
+```
+
+4. How does destructuring assignment work in ES6?
+
+```
+Destructuring assignment in ES6 (ECMAScript 2015) is a powerful feature that allows you to unpack values from arrays or properties from objects into distinct variables. It provides a more concise and readable way to extract data compared to traditional methods.
+
+Example: //object destructuring
+
+const person = { name: 'Alice', age: 30 };
+const { name, age } = person;
+
+console.log(name); // Alice
+console.log(age); // 30
+```
+
+5. Explain template literals in ES6. How are they different from string concatenation?
+
+```
+Template literals are enclosed by backticks (`` ` ``) instead of single or double quotes. They support:
+a) Expression Interpolation:
+Variables and JavaScript expressions can be directly embedded within the string using the ${expression} syntax. The value of the expression is then evaluated and inserted into the string.
+b)Multi-line Strings:
+
+Template literals can span multiple lines without needing escape characters like \n for line breaks, improving readability for longer strings or HTML structures.
+
+```
